@@ -1,13 +1,17 @@
 // tipografias
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+// font-family: "Playfair Display", serif;
+// font-family: "Raleway", sans-serif;
 
 // colores
 
-$bck:#000;
-$boton-bck:#000;
-$boton-bkc-hover:#000;
-$boton-text:#000;
-$title:#000;
-$text:#000;
-$text-white:#000;
+$bck:#F0F9FF;
+$title:#0A0A0A;
+$text:#111827;
+$boton-bck:#FFBF00;
+// $boton-bkc-hover:#EFF6FF;
+$boton-text:#EFF6FF;
+// $text-white:#000;
 
 // mixins
