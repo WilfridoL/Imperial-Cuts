@@ -17,7 +17,9 @@ button {
   cursor: pointer;
 }
 
-li, button, i {
+li,
+button,
+i {
   transition: all 0.3s ease-in;
 }
 
@@ -192,6 +194,8 @@ i:hover {
 }
 
 footer {
+  width: 100%;
+  height: auto;
   color: #EFF6FF;
   margin-top: 50px;
   background: #0A0A0A;
@@ -223,6 +227,89 @@ footer .creditos {
   width: 100%;
   padding: 8px 0px;
   background: rgba(17, 24, 39, 0.4);
+}
+
+.formulario {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+form .campo {
+  width: 100%;
+}
+form .campo input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 8px 3px;
+  box-sizing: border-box;
+  border: none;
+  border-top: 1px solid #0A0A0A;
+  border-left: 2px solid #0A0A0A;
+  border-right: 1px solid #0A0A0A;
+  border-bottom: 2px solid #0A0A0A;
+  border-radius: 5px;
+  margin: 8px 0px;
+  font-size: 16px;
+  outline-color: #111827;
+}
+form .campo textarea {
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 200px;
+}
+form .enviar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+form .enviar .btn {
+  width: 200px;
+}
+
+.formulario label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0A0A0A;
+}
+
+.sobre_nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.sobre_nosotros .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 45px;
+}
+.sobre_nosotros .user .img {
+  width: 150px;
+  height: 200px;
+  background: #EFF6FF;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.sobre_nosotros .user .img img {
+  width: 100%;
+}
+.sobre_nosotros .user p {
+  text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -278,6 +365,21 @@ footer .creditos {
     width: 50%;
     padding: 0;
   }
+  .sobre_nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .sobre_nosotros .user {
+    flex-direction: row;
+  }
+  .sobre_nosotros .user p {
+    text-align: left;
+  }
+  .user:nth-child(3) .img {
+    order: 2;
+  }
 }
 @media (min-width: 1024px) {
   p {
@@ -316,6 +418,9 @@ footer .creditos {
   }
   .servicios .contenido_servicio p {
     width: 60%;
+  }
+  form {
+    width: 50%;
   }
 }
 @media (min-width: 1443px) {

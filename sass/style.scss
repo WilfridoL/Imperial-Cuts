@@ -1,5 +1,4 @@
 @use "variable";
-
 @mixin font($size, $weight) {
   font-size: $size;
   font-weight: $weight;
@@ -30,8 +29,10 @@ button {
   font-family: "Raleway", sans-serif;
   cursor: pointer;
 }
-li, button, i {
-  transition: all .3s ease-in;
+li,
+button,
+i {
+  transition: all 0.3s ease-in;
 }
 img {
   width: 100%;
@@ -55,18 +56,18 @@ p {
   justify-content: center;
   background: variable.$boton-bck;
   color: variable.$boton-text;
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
   border-radius: 5px;
   @include font(14px, bold);
 }
-button:hover{
+button:hover {
   background: variable.$boton-bkc-hover;
 }
 
-li:hover{
+li:hover {
   opacity: 90%;
 }
-i:hover{
+i:hover {
   color: variable.$boton-bkc-hover;
 }
 // container
@@ -214,9 +215,12 @@ i:hover{
 // pie de pagina
 
 footer {
+  width: 100%;
+  height: auto;
   color: variable.$boton-text;
   margin-top: 50px;
   background: variable.$title;
+  // box-sizing: border-box;
   .encuentranos {
     width: 100%;
     display: flex;
@@ -245,6 +249,96 @@ footer {
     // margin-top: 16px;
     padding: 8px 0px;
     background: rgba(17, 24, 39, 0.4);
+  }
+}
+
+// html contacto
+
+.formulario {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  // pa
+
+  .campo {
+    width: 100%;
+  }
+  .campo input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px 3px;
+    box-sizing: border-box;
+    border: none;
+    border-top: 1px solid variable.$title;
+    border-left: 2px solid variable.$title;
+    border-right: 1px solid variable.$title;
+    border-bottom: 2px solid variable.$title;
+    border-radius: 5px;
+    margin: 8px 0px;
+    font-size: 16px;
+    outline-color: variable.$text;
+  }
+
+  .campo textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 200px;
+  }
+
+  .enviar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .btn{
+      width: 200px;
+    }
+  }
+}
+
+.formulario label {
+  display: block;
+  @include font(16px, bold);
+  color: variable.$title;
+}
+
+// html sobre nosotros
+
+.sobre_nosotros{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 45px;
+    .img{
+      width: 150px;
+      height: 200px;
+      background: variable.$boton-text;
+      border-radius: 5px;
+      box-sizing: border-box;
+      overflow: hidden;
+      img{
+        width: 100%;
+      }
+    }
+    p{
+      text-align: left;
+    }
   }
 }
 
@@ -327,6 +421,26 @@ footer {
       }
     }
   }
+
+  // html sobre nosotros
+
+.sobre_nosotros{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  .user{
+    flex-direction: row;
+    p{
+      text-align: left;
+    }
+  }
+}
+.user:nth-child(3){
+  .img{
+    order: 2;
+  }
+  }
 }
 
 // verison desktop
@@ -381,6 +495,10 @@ footer {
         width: 60%;
       }
     }
+  }
+
+  form{
+    width: 50%;
   }
 }
 
